@@ -1,0 +1,86 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-padding">
+      <ion-col
+        class="ion-text-center"
+        size-sm="12"
+        size-md="8"
+        size-lg="6"
+        size-xl="6"
+        offset-md="2"
+        offset-lg="3"
+        offset-xl="3"
+      >
+        <p class="ion-timer-text">
+          {{ timepast.min }}:{{ timepast.sec }}.{{ timepast.ms }}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="left-col-buttons" size="6">
+        <ng-container
+          *ngIf="!timer && !timePaused || running && totalTimer || timeReset "
+        >
+          <ion-button
+            color="resetButton"
+            expand="block"
+            size="large"
+            [disabled]="!totalTimer"
+            (click)="LapTimeSplit()"
+          >
+            <p class="ion-reset-text">Lap</p>
+          </ion-button>
+        </ng-container>
+
+        <ng-container
+          *ngIf="!running && !timer && !totalTimer && timePaused && !timeReset; "
+        >
+          <ion-button
+            color="resetButton"
+            expand="block"
+            size="large"
+            (click)="resetTimer()"
+          >
+            <p class="ion-reset-text">Reset</p>
+          </ion-button>
+        </ng-container>
+      </ion-col>
+
+      <ion-col class="right-col-buttons" size="6">
+        <ng-container *ngIf="!timer && !running">
+          <ion-button
+            color="startButton"
+            expand="block"
+            size="large"
+            (click)="startTimer()"
+          >
+            <p class="ion-start-text">{{ timePaused && !timeReset ? "Resume": "Start" }}</p>
+          </ion-button>
+        </ng-container>
+
+        <ng-container *ngIf="running">
+          <ion-button
+            color="stopButton"
+            expand="block"
+            size="large"
+            (click)="stopTimer()"
+          >
+            <p class="ion-stop-text">Stop</p>
+          </ion-button>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="div-lap" *ngFor="let lap of laps; let i = index">
+    <div class="lap-text">
+      <ion-icon name="flag"></ion-icon> &nbsp; <b> Lap {{ i + 1 }} :: </b> {{
+      lap }}
+    </div>
+    <br />
+    <div class="solid"></div>
+  </div>
+</ion-content>

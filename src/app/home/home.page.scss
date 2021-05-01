@@ -1,0 +1,96 @@
+
+/*TIMER TEXT*/
+
+.ion-timer-text{
+  color: white;
+  width: 100%;
+}
+
+
+p{
+  font-size: 17px;
+  letter-spacing:0.5px;
+}
+
+
+.ion-start-text{
+  color: #17c787;
+}
+
+.ion-reset-text{
+  color: #D3D3D3;
+}
+
+
+.ion-stop-text{
+  color: #D36269;
+}
+
+
+
+.div-lap{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.lap-text{
+  color: white;
+}
+
+.solid {
+  border-top: 0.2px solid rgba(173, 173, 173, 0.712);
+}
+
+
+// Responsive
+
+@media only screen and (max-width: 576px){
+  .left-col-buttons{
+    padding-left: .5em !important;
+  }
+  .right-col-buttons{
+    padding-right: .5em !important;
+  }
+}
+
+
+
+@media only screen and (max-width: 776px){
+  .left-col-buttons{
+    padding-left: 4em;
+  }
+  .right-col-buttons{
+    padding-right: 4em;
+  }
+  .ion-timer-text{
+    font-size: 3em !important;
+  }
+}
+
+
+@media only screen and (max-width: 976px){
+  .left-col-buttons{
+    padding-left: 10em;
+  }
+  .right-col-buttons{
+    padding-right: 10em;
+  }
+  .ion-timer-text{
+    font-size: 4em !important;
+  }
+  
+}
+
+@media only screen and (min-width: 977px){
+  .left-col-buttons{
+    padding-left: 25em;
+  }
+  .right-col-buttons{
+    padding-right: 25em;
+  }
+  .ion-timer-text{
+    font-size: 4em !important;
+  }
+}
+
+
