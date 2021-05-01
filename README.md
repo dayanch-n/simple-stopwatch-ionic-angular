@@ -1,5 +1,13 @@
-# simple-stopwatch-ionic-angular
+# Description
 Simple Stopwatch using Ionic framework and Angular
+
+**Features **
+
+ 1. Start 
+ 2. Stop 
+ 3. Lap
+ 4. Resume
+ 5. Reset
 
 # Demo 
 stopwatch-21app.firebaseapp.com
