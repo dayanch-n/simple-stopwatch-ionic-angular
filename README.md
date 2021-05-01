@@ -1,7 +1,7 @@
 # Description
 Simple Stopwatch using Ionic framework and Angular
 
-**Features **
+**Features**
 
  1. Start 
  2. Stop 
